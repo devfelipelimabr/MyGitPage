@@ -12,21 +12,21 @@ function hora() {
     if (hora >= 0 && hora < 12) {
         //bom dia
         msg.innerHTML = `Bom dia!`
-        relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}`
+        if (min < 10) { relogio.innerHTML = `${hora}<span id="dotClock">:</span>0${min}` } else { relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}` }
         img.src = 'img/sol.png'
 
 
     } else if (hora < 18) {
         //boa tarde
         msg.innerHTML = `Boa tarde!`
-        relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}`
+        if (min < 10) { relogio.innerHTML = `${hora}<span id="dotClock">:</span>0${min}` } else { relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}` }
         img.src = 'img/sol.png'
 
 
     } else {
         //boa noite
         msg.innerHTML = `Boa noite!`
-        relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}`
+        if (min < 10) { relogio.innerHTML = `${hora}<span id="dotClock">:</span>0${min}` } else { relogio.innerHTML = `${hora}<span id="dotClock">:</span>${min}` }
         img.src = 'img/lua.png'
 
     }
