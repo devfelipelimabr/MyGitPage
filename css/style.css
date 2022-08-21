@@ -23,7 +23,7 @@ header h1 {
 
 section {
     background-color: rgba(255, 255, 255, 0.50);
-    padding: 20px 20px 20px 0;
+    padding: 0;
     border-radius: 0 10px 10px 0;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
@@ -44,7 +44,7 @@ main h1 {
 }
 
 section #perfil {
-    margin: 10px 30px;
+    margin: 25px 30px;
     padding: 15px 15px;
     border: 15px solid #2627498e;
     border-radius: 50%;
@@ -61,6 +61,7 @@ section h2 {
 
 section p {
     margin-left: 50px;
+    margin-right: 20px;
     color: black;
     font-size: 1.5em;
 
