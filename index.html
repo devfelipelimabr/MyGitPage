@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Lima</title>
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+
+<body onload="hora()">
+
+    <div class="container">
+
+        <header class="header">
+            <time id="relogio"></time>
+            <img id="turno" src="" alt="imagem">
+            <h1 id="msg">Bem-vindo(a) a minha página pessoal !</h1>
+
+            <svg width="50%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path id="path">
+                   <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="10s" begin="1.5s" repeatCount="1"/>
+                 </path>
+                 <text font-size="100" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
+                   <textPath xlink:href="#path">HELLO WORLD !
+                   </textPath>
+                 </text>
+               </svg>
+               
+               <audio controls autoplay>
+                <source src="https://18513.live.streamtheworld.com/RADIO_89FM_ADP.aac?1661044652362" type="audio/mp3" autostart="true">
+                Seu navegador não suporta áudio tag.
+            </audio>
+
+        </header>
+
+        <main class="main">
+            <section>
+                <img id="perfil" src="img/perfil.png" alt="perfil-image">
+                <h1>Seja Bem-vindo(a) !</h1>
+                <p>
+                    &#128075;
+                </p>
+                <br>
+                <p>
+                    Me chamo <strong>Felipe Lima</strong>. Sou desenvolvedor web fullstack, <strong>produzo soluções</strong> de forma criativa e com
+                    agilidade.
+                </p>
+                <br>
+
+                <h2>Está precisando de ajuda?</h2>
+                <p>
+                    Entre em contato através dos <span>links</span> no final da página.
+                </p>
+                <br>
+                
+            </section>
+            <blockquote cite="https://www.pensador.com/frase/MzU4Mg/?utm_source=whatsapp&utm_medium=referral">
+                <p>
+                    "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada
+                    dificuldade." <cite>| Bertram Carr</cite>
+                </p>
+            </blockquote>
+
+            <aside class="animation">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+
+                <div class="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </aside>
+
+        </main>
+
+
+        <footer class="footer">
+            <address>
+                Criação e Desenvolvimento: <a href="mailto:felipelima85@hotmail.com" rel="external" target="_blank"
+                    id="nome"> <img src="img/email-icon.png" alt="mail-image"> Felipe Lima</a> &copy; 2022 - <a href="https://www.linkedin.com/in/devfelipelima/"
+                    rel="external" target="_blank" id="linkedin"><img src="img/linkedin-icon.png" alt="linkedin-image"
+                        srcset=""> Linkedin</a> | <a href="https://github.com/devfelipelimabr" target="_blank"
+                    rel="external"><img src="img/github-icon.png" alt="git-image" srcset=""> GitHub</a> | <a href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB" target="_blank" rel="external"><img src="img/whatsApp-icon.png" alt="whatsapp-image" srcset=""> WhatsApp</a>
+            </address>
+        </footer>
+    </div>
+
+    <script src="hora.js"></script>
+    
+</body>
+
+</html>
