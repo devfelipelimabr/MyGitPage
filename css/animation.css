@@ -131,6 +131,11 @@
     animation-timing-function: ease-in-out;
 
 }
+@media only screen and (max-width: 720px){
+    .loading {
+        opacity: 0;
+    }
+}
 
 .loading span:nth-child(2) {
     background-color: white;
