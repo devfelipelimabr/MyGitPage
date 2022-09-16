@@ -44,8 +44,6 @@
         0 0 20px #24ecff,
         0 0 50px #24ecff;
 
-
-
 }
 
 .container .ring:nth-child(2) {
@@ -71,8 +69,6 @@
         0 0 0 20px #93ff2d11,
         0 0 20px #93ff2d,
         0 0 50px #93ff2d;
-
-
 
 }
 
@@ -111,8 +107,6 @@
         0 0 20px #e41cf8,
         0 0 50px #e41cf8;
 
-
-
 }
 
 .loading span {
@@ -131,7 +125,8 @@
     animation-timing-function: ease-in-out;
 
 }
-@media only screen and (max-width: 720px){
+
+@media only screen and (max-width: 720px) {
     .loading {
         opacity: 0;
     }
@@ -170,20 +165,18 @@
 }
 
 main h1 {
+    opacity: 0;
     animation-name: opaco;
-    animation-duration: 2s;
-    
+    animation-duration: 10.75s;
+    animation-delay: 2.5s;
+
 }
 
 @keyframes opaco {
-    from {
-        opacity: 0;
-        transform: translatey(30px);
-        
-    }
 
     to {
-        opacity: 1;
+        opacity: 0.9;
+
     }
 }
 
@@ -192,13 +185,12 @@ section {
     animation-duration: 2.5s;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-@keyframes slide{
-   from{
-    transform: translateX(-100vh);
 
-   }
+@keyframes slide {
+    from {
+        transform: translateX(-100vh);
 
-   to{
+    }
 
-   }
+    to {}
 }
