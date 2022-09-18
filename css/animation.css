@@ -116,7 +116,7 @@
     width: 15px;
     height: 15px;
     margin: 0 5px;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 50%;
     display: inline-block;
     animation-name: dots;
@@ -164,20 +164,33 @@
 
 }
 
-main h1 {
+.bemVindo {
     opacity: 0;
     animation-name: opaco;
-    animation-duration: 10.75s;
+    animation-duration: 11s;
     animation-delay: 2.5s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    top: 0%;
 
 }
 
 @keyframes opaco {
 
-    to {
+    15% {
         opacity: 0.9;
-
     }
+
+       
+    85% {
+        opacity: 1;
+        top: 7.5vh;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.452);
+    }
+    to {
+        opacity: 0;
+        top: 0%;
+    }
+
 }
 
 section {
