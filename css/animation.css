@@ -1,3 +1,4 @@
+/*ANÉIS GIRATÓRIOS*/
 .animation {
     position: relative;
     margin: auto 5px;
@@ -149,6 +150,7 @@
     }
 }
 
+/*RELÓGIO*/
 #dotClock {
     animation-name: dotClock;
     animation-duration: 1s;
@@ -164,6 +166,7 @@
 
 }
 
+/*MENSAGEM DE BOAS VINDAS*/
 .bemVindo {
     opacity: 0;
     animation-name: opaco;
@@ -192,6 +195,7 @@
 
 }
 
+/*QUEM SOU EU*/
 section {
     animation-name: slide;
     animation-duration: 2.5s;
@@ -200,9 +204,6 @@ section {
 
 @keyframes slide {
     from {
-        transform: translateX(-100vh);
-
+        transform: translateX(-100vw);
     }
-
-    to {}
 }
