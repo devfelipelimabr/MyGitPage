@@ -177,9 +177,8 @@
 @keyframes opaco {
 
     15% {
-        opacity: 0.9;
+        opacity: 0.975;
     }
-
        
     85% {
         opacity: 1;
