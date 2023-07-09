@@ -6,96 +6,99 @@
 
 $(document).ready(documentReady);
 
-function documentReady()
-{
+function documentReady() {
+  var characterCollection = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "Y",
+    "Z",
+  ];
 
-	var characterCollection 	= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "Y", "Z"];
+  var currentText = $(".name").text();
 
-	var currentText 			= $(".name").text();
+  var currentTextCollection = new Array();
 
-	var currentTextCollection 	= new Array();
+  var characterCount = 0;
 
-	var characterCount			= 0;
+  var characterSpeed = 1000;
 
-	var characterSpeed			= 500;
+  pushCurrentTextChrachters();
 
-	pushCurrentTextChrachters();
+  function pushCurrentTextChrachters() {
+    for (var i = 0; i < currentText.length; i++) {
+      var currentCharacter = currentText.slice(i, i + 1);
 
-	function pushCurrentTextChrachters () {
+      currentTextCollection.push(currentCharacter);
+    }
+  }
 
-		for(var i = 0; i < currentText.length; i++)
-		{
+  var characterCountIncreaseInterval = setInterval(
+    characterCountIncrease,
+    characterSpeed
+  );
 
-			var currentCharacter = currentText.slice(i, i+1);
+  function characterCountIncrease() {
+    if (characterCount == currentTextCollection.length) {
+      clearInterval(characterCountIncreaseInterval);
 
-			currentTextCollection.push(currentCharacter);
+      clearInterval(setRandomTextInterval);
+    }
 
-		}
+    characterCount++;
+  }
 
-	}
+  function getRandomText() {
+    var result = "";
 
-	var characterCountIncreaseInterval = setInterval(characterCountIncrease, characterSpeed);
+    if (characterCount == 0) {
+      for (var i = 0; i < currentTextCollection.length; i++) {
+        var randomCharacter =
+          characterCollection[
+            Math.floor(Math.random() * characterCollection.length)
+          ];
 
-	function characterCountIncrease () {
+        result += randomCharacter;
+      }
+    } else {
+      result = currentText.slice(0, characterCount);
 
-		if (characterCount == currentTextCollection.length)
-		{
+      for (var i = 0; i < currentTextCollection.length - characterCount; i++) {
+        var randomCharacter =
+          characterCollection[
+            Math.floor(Math.random() * characterCollection.length)
+          ];
 
-			clearInterval(characterCountIncreaseInterval);
+        result += randomCharacter;
+      }
+    }
 
-			clearInterval(setRandomTextInterval);
+    return result;
+  }
 
-		}
+  var setRandomTextInterval = setInterval(setRandomText, 50);
 
-		characterCount++;
+  function setRandomText() {
+    console.log(getRandomText());
 
-	}
-
-	function getRandomText () {
-
-		var result = "";
-
-		if(characterCount == 0)
-		{
-
-			for(var i = 0; i < currentTextCollection.length; i++)
-			{
-
-				var randomCharacter = characterCollection[ Math.floor( Math.random() * characterCollection.length ) ];
-
-				result += randomCharacter;
-
-			}
-
-		}
-		else
-		{
-
-			result = currentText.slice(0, characterCount);
-
-			for(var i = 0; i < currentTextCollection.length - characterCount; i++)
-			{
-
-				var randomCharacter = characterCollection[ Math.floor( Math.random() * characterCollection.length ) ];
-
-				result += randomCharacter;
-
-			}
-
-		}
-
-		return result;
-
-	}
-
-	var setRandomTextInterval = setInterval(setRandomText, 50);
-
-	function setRandomText () {
-
-		console.log(getRandomText());
-
-		$(".name").text(getRandomText());
-
-	}
-
+    $(".name").text(getRandomText());
+  }
 }

@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AFSL</title>
-    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg" />
+    <link rel="shortcut icon" href="img/whiteLogo.svg" type="image/svg" />
     <!--LOCAL STYLEsHEETS-->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsivity.css">
     <link rel="stylesheet" href="css/animations.css">
     <!--CDN FOR RAMDOMcHARS-->
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="navLogo">
-          <a href="#"><img src="img/favicon.svg" alt="logo" /></a>
+      <nav class="blur">
+        <div class="logo">
+          <a href="#"><img src="img/whiteLogo.svg" alt="logo" /></a>
         </div>
-        <div class="containerFluid">
+        <div class="containerFluid colorToggler">
           <span class="colorBtn"> </span>
         </div>
         <div class="containerFluid">
@@ -25,6 +26,31 @@
         </div>
         <div class="containerFluid">
           <a href="https://github.com/devfelipelimabr" target="_blank" rel="noopener noreferrer"><span class="navText" id="github">github</span></a>
+        </div>
+        <div class="containerFluid">
+          <a href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB" target="_blank" rel="noopener noreferrer"><span class="navText" id="whatsapp">whatsapp</span></a>
+        </div>
+        <div class="containerFluid">
+          <a href="mailto:felipelima85@hotmail.com" target="_blank" rel="noopener noreferrer"><span class="navText" id="email">email</span></a>
+        </div>
+        <div class="toggleMenu">
+          <div class="mobile-nav-button">
+            <div class="mobile-nav-button__line"></div>
+            <div class="mobile-nav-button__line"></div>
+            <div class="mobile-nav-button__line"></div>
+          </div>
+      
+          <div class="mobile-menu">
+            <div class="containerFluid colorToggler">
+              <span class="colorBtn"> </span>
+            </div>
+            <ul>
+              <li><a target="_blank" href="https://www.linkedin.com/in/devfelipelima/">linkedin</a></li>
+              <li><a target="_blank" href="https://github.com/devfelipelimabr">github</a></li>
+              <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB" target="_blank" rel="noopener noreferrer">whatsapp</a></li>
+              <li><a target="_blank" href="mailto:felipelima85@hotmail.com">email</a></li>									
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -41,25 +67,51 @@
 </section>
 <section class="media">
   <video id="video-background" autoplay loop muted style="background-image: url('/img/networkWave.jpg');">
-    <source src="https://v4.cdnpk.net/videvo_files/video/free/video0485/large_watermarked/_import_61b58da8cab8f3.69794594_FPpreview.mp4" type="video/mp4">
+    <source src="https://v4.cdnpk.net/videvo_files/video/free/video0485/large_watermarked/_import_61c2b2e01baf64.15430536_FPpreview.mp4" type="video/mp4">
     <!-- Caso queira adicionar outros formatos de vídeo -->
     <!-- <source src="caminho/do/video.webm" type="video/webm"> -->
     <!-- <source src="caminho/do/video.ogv" type="video/ogg"> -->
   </video>
 </section>
 <section class="featuredWork">
-  <h1 class="grayText">featured Work</h1>
-  <video id="video-background" autoplay loop muted style="background-image: url('/');">
-    <source src="" type="video/mp4">
+  <h1>featured Work</h1>
+  <video id="video-background" autoplay loop muted style="background-image: url('/img/featureWorkBG.jpg');">
+    <source src="https://v1.cdnpk.net/videvo_files/video/free/2023-02/large_watermarked/221026_06_Dancer_4k_017_FPpreview.mp4" type="video/mp4">
     <!-- Caso queira adicionar outros formatos de vídeo -->
     <!-- <source src="caminho/do/video.webm" type="video/webm"> -->
     <!-- <source src="caminho/do/video.ogv" type="video/ogg"> -->
   </video>
+  <h1>Let’s bring your next project to life.</h1>
+  <h1 class="grayText">Whether you’re a solo entrepreneur, big brand, start-up, studio, agency, it doesn’t matter. Let’s create some great work.</h1>
+
 </section>
+
     </main>
+
+    <footer>
+<div class="backTop">
+  <a href="#"><h4 class="grayText">Back to top ↑</h4></a>
+</div>
+<div class="msg">
+  <h4>
+    follow your dreams
+  </h4>
+</div>
+<div class="bottomFooter">
+<div class="logo" id="footerLogo">
+  <a href="#"><img src="img/whiteLogo.svg" alt="logo"/></a>
+</div>
+<div class="year">
+
+</div>
+</div>
+    </footer>
     <script src="js/toggler.js"></script>
     <script src="js/cursor.js"></script>    
     <script src="js/randomChar.js"></script>    
     <script src="js/glitchEffect.js"></script>    
+    <script src="js/blurEffect.js"></script>    
+    <script src="js/currentYear.js"></script>    
+    <script src="js/mobileMenu.js"></script>    
   </body>
 </html>

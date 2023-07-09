@@ -1,0 +1,17 @@
+@media screen and (max-width: 760px) {
+    nav{
+        justify-content: center;
+    }
+    nav > .containerFluid{
+display: none;
+    }
+    .mobile-nav-button{
+        display: block;
+    }
+    .colorToggler{
+        position: absolute;
+        top: 5rem;
+        left: 2rem;
+    }
+  }
+  
