@@ -2,197 +2,116 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felipe Lima</title>
-    <link
-      rel="shortcut icon"
-      href="https://icons.iconarchive.com/icons/rokey/popo-emotions/32/haha-icon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="css/animation.css" />
+    <title>AFSL</title>
+    <link rel="shortcut icon" href="img/whiteLogo.svg" type="image/svg" />
+    <!--LOCAL STYLEsHEETS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsivity.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!--CDN FOR RAMDOMcHARS-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   </head>
-
-  <body onload="hora()">
-    <div class="container">
-      <header class="header">
-        <time id="relogio"></time>
-        <img id="turno" src="" alt="imagem" />
-        <h1 id="msg" style="color: rgba(245, 245, 245, 0.5)"></h1>
-
-        <svg
-          width="50%"
-          height="100%"
-          viewBox="30 -50 600 500"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-        >
-          <path id="path">
-            <animate
-              attributeName="d"
-              from="m0,110 h0"
-              to="m0,110 h1100"
-              dur="11s"
-              begin="5s"
-              repeatCount="1"
-            />
-          </path>
-          <text
-            font-size="100"
-            font-family="Montserrat"
-            fill="hsla(36, 95%, 85%, 1)"
-          >
-            <textPath xlink:href="#path">HELLO WORLD !</textPath>
-          </text>
-        </svg>
-      </header>
-
-      <main class="main">
-        <h1 class="bemVindo">Seja Bem-vindo(a) !</h1>
-        <section id="resumo">
-          <img id="perfil" src="img/perfil-2.png" alt="perfil-image" />
-
-          <p>&#128075;</p>
-          <br />
-          <p>
-            Me chamo <strong>Felipe Lima</strong>. Sou desenvolvedor web
-            fullstack, <strong>produzo soluções</strong> de forma criativa e com
-            agilidade.
-          </p>
-          <br />
-          <p>
-            Eu tive meu primeiro contato com linhas de código aos 20 anos de
-            idade, quando estava na faculdade.
-          </p>
-          <br />
-          <p>
-            Naquele momento tive uma sensação ótima que me lembro até hoje.
-            Percebi que finalmente encontrei algo que eu realmente gostava – e
-            isso me fascinou. Desde então, decidi que queria isso na minha vida
-            — eu queria ser um programador, porém devido a motivos financeiros
-            tive que trancar a faculdade na época e retornei após alguns anos
-            pro curso de Análise e desenvolvimento de sistemas, em paralelo com
-            diversos outros cursos na área de desenvolvimento.
-          </p>
-          <br />
-          <p>
-            Escolhi o <strong>desenvolvimento web</strong> como foco atual da
-            minha carreira pois ele me dá liberdade para fazer o que mais me
-            fascina na programação — que é criar páginas e aplicações incríveis,
-            que podem ajudar e simplificar a vida das pessoas — e venho me
-            aprimorando diariamente nessa área. Minhas especialidades são:
-            <strong
-              >HTML, CSS, JavaScript, TypeScript, NodeJS, Git, Github, SQL,
-              Bootstrap e WORDPRESS.</strong
-            >
-          </p>
-          <br />
-          <h2>Está precisando de ajuda?</h2>
-          <br />
-          <p>
-            Entre em <span class="contato">contato</span> através dos links no
-            final da página.
-          </p>
-          <br />
-        </section>
-        <blockquote
-          cite="https://www.pensador.com/frase/MzU4Mg/?utm_source=whatsapp&utm_medium=referral"
-        >
-          <p>
-            "O pessimista vê dificuldade em cada oportunidade; o otimista vê
-            oportunidade em cada dificuldade." <cite>| Bertram Carr</cite>
-          </p>
-        </blockquote>
-
-        <aside class="animation">
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-
-          <div class="loading">
-            <span></span>
-            <span></span>
-            <span></span>
+  <body>
+    <header>
+      <nav class="blur">
+        <div class="logo">
+          <a href="#"><img src="img/whiteLogo.svg" alt="logo" /></a>
+        </div>
+        <div class="containerFluid colorToggler">
+          <span class="colorBtn"> </span>
+        </div>
+        <div class="containerFluid">
+          <a href="https://www.linkedin.com/in/devfelipelima/" target="_blank" rel="noopener noreferrer"><span class="navText" id="linkedin">linkedin</span></a>
+        </div>
+        <div class="containerFluid">
+          <a href="https://github.com/devfelipelimabr" target="_blank" rel="noopener noreferrer"><span class="navText" id="github">github</span></a>
+        </div>
+        <div class="containerFluid">
+          <a href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB" target="_blank" rel="noopener noreferrer"><span class="navText" id="whatsapp">whatsapp</span></a>
+        </div>
+        <div class="containerFluid">
+          <a href="mailto:felipelima85@hotmail.com" target="_blank" rel="noopener noreferrer"><span class="navText" id="email">email</span></a>
+        </div>
+        <div class="toggleMenu">
+          <div class="mobile-nav-button">
+            <div class="mobile-nav-button__line"></div>
+            <div class="mobile-nav-button__line"></div>
+            <div class="mobile-nav-button__line"></div>
           </div>
-        </aside>
-      </main>
+      
+          <div class="mobile-menu">
+            <div class="containerFluid colorToggler">
+              <span class="colorBtn"> </span>
+            </div>
+            <ul>
+              <li><a target="_blank" href="https://www.linkedin.com/in/devfelipelima/">linkedin</a></li>
+              <li><a target="_blank" href="https://github.com/devfelipelimabr">github</a></li>
+              <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB" target="_blank" rel="noopener noreferrer">whatsapp</a></li>
+              <li><a target="_blank" href="mailto:felipelima85@hotmail.com">email</a></li>									
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+<section class="hello">
+  <div class="textArea">
+  <h1>Hi! My name is <span class="name">Felipe</span></h1>
+  <h2>a fullstack developer and graphic designer</h2>
+  <h2 class="grayText">based in brazil.</h2>
+</div>
+<div class="myPhoto glitch-container">
+  <img src="img/deChapeu4x4.png" alt="photo" class="glitch"  data-text="glitch">
+</div>
+</section>
+<section class="media">
+  <video id="video-background" autoplay loop muted style="background-image: url('/img/networkWave.jpg');">
+    <source src="https://v4.cdnpk.net/videvo_files/video/free/video0485/large_watermarked/_import_61c2b2e01baf64.15430536_FPpreview.mp4" type="video/mp4">
+    <!-- Caso queira adicionar outros formatos de vídeo -->
+    <!-- <source src="caminho/do/video.webm" type="video/webm"> -->
+    <!-- <source src="caminho/do/video.ogv" type="video/ogg"> -->
+  </video>
+</section>
+<section class="featuredWork">
+  <h1>featured Work</h1>
+  <video id="video-background" autoplay loop muted style="background-image: url('/img/featureWorkBG.jpg');">
+    <source src="https://v1.cdnpk.net/videvo_files/video/free/2023-02/large_watermarked/221026_06_Dancer_4k_017_FPpreview.mp4" type="video/mp4">
+    <!-- Caso queira adicionar outros formatos de vídeo -->
+    <!-- <source src="caminho/do/video.webm" type="video/webm"> -->
+    <!-- <source src="caminho/do/video.ogv" type="video/ogg"> -->
+  </video>
+  <h1>Let’s bring your next project to life.</h1>
+  <h1 class="grayText">Whether you’re a solo entrepreneur, big brand, start-up, studio, agency, it doesn’t matter. Let’s create some great work.</h1>
 
-      <footer class="footer">
-        <address>
-          <a
-            href="mailto:felipelima85@hotmail.com"
-            rel="external"
-            target="_blank"
-            id="nome"
-          >
-            <img
-              src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/32/Other-Mail-Metro-icon.png"
-              alt="mail-image"
-          /></a>
-          |
-          <a
-            href="https://www.linkedin.com/in/devfelipelima/"
-            rel="external"
-            target="_blank"
-            id="linkedin"
-            ><img
-              src="https://icons.iconarchive.com/icons/danleech/simple/32/linkedin-icon.png"
-              alt="linkedin-image"
-              srcset=""
-          /></a>
-          |
-          <a
-            href="https://github.com/devfelipelimabr"
-            target="_blank"
-            rel="external"
-            ><img
-              src="https://icons.iconarchive.com/icons/danleech/simple/32/github-icon.png"
-              alt="git-image"
-              srcset=""
-          /></a>
-          |
-          <a
-            href="https://api.whatsapp.com/send?phone=5571986695268&text=Felipe%20Lima%20-%20Desenvolvedor%20WEB"
-            target="_blank"
-            rel="external"
-            ><img
-              src="https://icons.iconarchive.com/icons/limav/flat-gradient-social/32/Whatsapp-icon.png"
-              alt="whatsapp-image"
-              srcset=""
-          /></a>
-          |
-          <a
-            href="https://www.devfelipelimabr.42web.io/"
-            target="_blank"
-            rel="external"
-            ><img
-              src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/32/Folders-OS-User-With-Frame-Metro-icon.png"
-              alt="cv-image"
-              srcset=""
-          /></a>
-          <a
-            href="https://replit.com/@devfelipelimabr"
-            rel="external"
-            target="_blank"
-            ><img src="" alt="" srcset=""
-          /></a>
-        </address>
+</section>
 
-        <p>
-          Desenvolvido em
-          <img src="img/HTML-5-Metro-icon.png" alt="html-image" srcset="" />
-          HTML - <img src="img/css-3-icon.png" alt="css-image" srcset="" /> CSS
-          -
-          <img src="img/javascript-icon.png" alt="js-image" srcset="" />
-          JavaScript
-        </p>
-      </footer>
-    </div>
+    </main>
 
-    <script src="welcome.js"></script>
+    <footer>
+<div class="backTop">
+  <a href="#"><h4 class="grayText">Back to top ↑</h4></a>
+</div>
+<div class="msg">
+  <h4>
+    follow your dreams
+  </h4>
+</div>
+<div class="bottomFooter">
+<div class="logo" id="footerLogo">
+  <a href="#"><img src="img/whiteLogo.svg" alt="logo"/></a>
+</div>
+<div class="year">
+
+</div>
+</div>
+    </footer>
+    <script src="js/toggler.js"></script>
+    <script src="js/cursor.js"></script>    
+    <script src="js/randomChar.js"></script>    
+    <script src="js/glitchEffect.js"></script>    
+    <script src="js/blurEffect.js"></script>    
+    <script src="js/currentYear.js"></script>    
+    <script src="js/mobileMenu.js"></script>    
   </body>
 </html>
