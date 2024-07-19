@@ -1,5 +1,3 @@
-Here is a sample README file for your website:
-
 ---
 
 # AFSL Website
